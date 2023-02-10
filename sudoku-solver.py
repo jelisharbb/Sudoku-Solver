@@ -18,7 +18,7 @@ subBoxDividerX = 0
 subBoxDividerY = 0
 answerRangeIndex = 0
 
-size = int(input("What size of the puzzle do you want to find a solution for? (3/6/9)"))
+size = int(input("What size of the puzzle do you want to find a solution for? (3/6/9): "))
 if size == 3:
     puzzleSize = 3
     subBoxDividerX = 1
@@ -68,18 +68,18 @@ print(np.matrix(chosenPuzzle))
 def possible(row, column, answer):
     global chosenPuzzle
 
-    for i in range(0, 9): # checks if the number is already in the row 
+    for i in range(0, puzzleSize): # checks if the number is already in the row 
         if chosenPuzzle [row][i] == answer:
             return False
 
-    for i in range(0, 9): # checks if the number is already in the column 
+    for i in range(0, puzzleSize): # checks if the number is already in the column 
         if chosenPuzzle [i][column] == answer:
             return False
 
-    subBoxRow = (row // 3) * 3
-    subBoxCol = (column // 3) * 3
-    for i in range(0, 3): # checks if the number is already in the sub box of the puzzle 
-        for j in range(0, 3):
+    subBoxRow = (row // subBoxDividerY) * subBoxMultiplierY
+    subBoxCol = (column // subBoxDividerX) * subBoxMultiplierX
+    for i in range(0, subBoxMultiplierY): # checks if the number is already in the sub box of the puzzle 
+        for j in range(0, subBoxMultiplierY):
             if chosenPuzzle[subBoxRow + 1][subBoxCol + j] == answer:
                 return False
 
@@ -87,10 +87,10 @@ def possible(row, column, answer):
 
 def solve():
     global chosenPuzzle
-    for row in range(9):
-        for column in range(9):
+    for row in range(puzzleSize):
+        for column in range(puzzleSize):
             if chosenPuzzle[row][column] == 0: # checks if the certain spot is blank
-                for answer in range(1, 10): # iterates numbers 1 to 9 to the blank spot
+                for answer in range(1, answerRangeIndex): # iterates numbers 1 to 9 to the blank spot
                     if possible(row, column, answer):
                         chosenPuzzle[row][column] = answer # if the number satisfies the rules of the puzzle, it will be written
                         solve()
