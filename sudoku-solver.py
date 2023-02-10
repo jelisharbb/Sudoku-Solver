@@ -18,7 +18,12 @@ subBoxDividerY = 0
 answerRange = 0
 
 size = int(input("What size of the puzzle do you want to find a solution for? (3/6/9)"))
-
+if size == 3:
+    puzzleSize = 3
+    subBoxMultiplier = 1
+    subBoxDividerX = 1
+    subBoxDividerY = 1
+    answerRange = 3
 
 puzzle1 = [[0, 0, 0, 2, 6, 0, 7, 0, 1], [6, 8, 0, 0, 7, 0, 0, 9, 0], [1, 9, 0, 0, 0, 4, 5, 0, 0], [8, 2, 0, 1, 0, 0, 0, 4, 7], [0, 0, 4, 6, 0, 2, 9, 0, 0], [0, 5, 0, 0, 0, 3, 0, 2, 8], [0, 0, 9, 3, 0, 0, 0, 7, 4], [0, 4, 0, 0, 5, 0, 0, 3, 6], [7, 0, 3, 0, 1, 8, 0, 0, 0]]
 
