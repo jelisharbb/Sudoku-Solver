@@ -7,6 +7,9 @@ while True:
     readiness = input("\nDo you want to proceed? ")
     if readiness.lower() == "yes":
         break
+    elif readiness.lower() == "no":
+        print("\nGood bye...")
+        exit()
 
 puzzle1 = [[0, 0, 0, 2, 6, 0, 7, 0, 1], [6, 8, 0, 0, 7, 0, 0, 9, 0], [1, 9, 0, 0, 0, 4, 5, 0, 0], [8, 2, 0, 1, 0, 0, 0, 4, 7], [0, 0, 4, 6, 0, 2, 9, 0, 0], [0, 5, 0, 0, 0, 3, 0, 2, 8], [0, 0, 9, 3, 0, 0, 0, 7, 4], [0, 4, 0, 0, 5, 0, 0, 3, 6], [7, 0, 3, 0, 1, 8, 0, 0, 0]]
 
@@ -16,7 +19,7 @@ puzzle3 = [[1, 0, 0, 4, 8, 9, 0, 0, 6], [7, 3, 0, 0, 5, 0, 0, 4, 0], [4, 6, 0, 0
 
 puzzle4 = [[5, 3, 0, 0, 7, 0, 0, 0, 0], [6, 0, 0, 1, 9, 5, 0, 0, 0], [0, 9, 8, 0, 0, 0, 0, 6, 0], [8, 0, 0, 0, 6, 0, 0, 0, 3], [4, 0, 0, 8, 0, 3, 0, 0, 1], [7, 0, 0, 0, 2, 0, 0, 0, 6], [0, 6, 0, 0, 0, 0, 2, 8, 0], [0, 0, 0, 4, 1, 9, 0, 0, 5], [0, 0, 0, 0, 8, 0, 0, 7, 9]]
 
-chosenPuzzle = int(input("Which puzzle do you want to find a solution for? (1/2/3): "))
+chosenPuzzle = int(input("Which puzzle do you want to find a solution for? (1/2/3/4): "))
 if chosenPuzzle == 1:
     chosenPuzzle = puzzle1
 elif chosenPuzzle == 2:
@@ -24,7 +27,7 @@ elif chosenPuzzle == 2:
 elif chosenPuzzle == 3:
     chosenPuzzle = puzzle3
 elif chosenPuzzle == 4:
-    chosenPuzzle = puzzle3
+    chosenPuzzle = puzzle4
 
 print(np.matrix(chosenPuzzle))
 
