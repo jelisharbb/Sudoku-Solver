@@ -12,18 +12,27 @@ while True:
         exit()
 
 puzzleSize = 0
-subBoxMultiplier = 0
+subBoxMultiplierX = 0
+subBoxMultiplierY = 0
 subBoxDividerX = 0
 subBoxDividerY = 0
-answerRange = 0
+answerRangeIndex = 0
 
 size = int(input("What size of the puzzle do you want to find a solution for? (3/6/9)"))
 if size == 3:
     puzzleSize = 3
-    subBoxMultiplier = 1
     subBoxDividerX = 1
     subBoxDividerY = 1
-    answerRange = 3
+    subBoxMultiplierX = 1
+    subBoxMultiplierY = 1
+    answerRangeIndex = 4
+elif size == 6:
+    puzzleSize = 6
+    subBoxDividerX = 2
+    subBoxDividerY = 3
+    subBoxMultiplierX = 3
+    subBoxMultiplierY = 3
+    answerRangeIndex = 7
 
 puzzle1 = [[0, 0, 0, 2, 6, 0, 7, 0, 1], [6, 8, 0, 0, 7, 0, 0, 9, 0], [1, 9, 0, 0, 0, 4, 5, 0, 0], [8, 2, 0, 1, 0, 0, 0, 4, 7], [0, 0, 4, 6, 0, 2, 9, 0, 0], [0, 5, 0, 0, 0, 3, 0, 2, 8], [0, 0, 9, 3, 0, 0, 0, 7, 4], [0, 4, 0, 0, 5, 0, 0, 3, 6], [7, 0, 3, 0, 1, 8, 0, 0, 0]]
 
@@ -60,8 +69,8 @@ def possible(row, column, answer):
         if chosenPuzzle [i][column] == answer:
             return False
 
-    subBoxRow = (row//3)*3
-    subBoxCol = (column//3)*3
+    subBoxRow = (row // 3) * 3
+    subBoxCol = (column // 3) * 3
     for i in range(0, 3): # checks if the number is already in the sub box of the puzzle 
         for j in range(0, 3):
             if chosenPuzzle[subBoxRow + 1][subBoxCol + j] == answer:
