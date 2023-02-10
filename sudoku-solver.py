@@ -51,8 +51,8 @@ elif size == 6:
     puzzleSize = 6
     subBoxDividerX = 2
     subBoxDividerY = 3
-    subBoxMultiplierX = 3
-    subBoxMultiplierY = 2
+    subBoxMultiplierX = 2
+    subBoxMultiplierY = 3
     answerRangeIndex = 7
 
     # 6 by 6 puzzles
@@ -117,7 +117,7 @@ def possible(row, column, answer):
     subBoxRow = (row // subBoxDividerY) * subBoxMultiplierY
     subBoxCol = (column // subBoxDividerX) * subBoxMultiplierX
     for i in range(0, subBoxMultiplierY): # checks if the number is already in the sub box of the puzzle 
-        for j in range(0, subBoxMultiplierY):
+        for j in range(0, subBoxMultiplierX):
             if finalPuzzle[subBoxRow + i][subBoxCol + j] == answer:
                 return False
 
