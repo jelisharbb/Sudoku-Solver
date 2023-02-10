@@ -19,6 +19,7 @@ subBoxDividerY = 0
 answerRangeIndex = 0
 
 size = int(input("What size of the puzzle do you want to find a solution for? (3/6/9): "))
+
 if size == 3:
     puzzleSize = 3
     subBoxDividerX = 1
@@ -26,6 +27,26 @@ if size == 3:
     subBoxMultiplierX = 1
     subBoxMultiplierY = 1
     answerRangeIndex = 4
+
+    # 3 by 3 puzzles
+    puzzle3_1 = [[2, 0, 3], [1, 0, 0], [0, 0, 1]]
+    puzzle3_2 = [[1, 0, 0], [0, 2, 0], [0, 0, 3]]
+    puzzle3_3 = [[0, 1, 0], [0, 0, 3], [2, 0, 0]]
+    puzzle3_4 = [[0, 3, 0], [0, 1, 0], [1, 0, 0]]
+    puzzle3_5 = [[0, 0, 1], [1, 0, 0], [0, 0, 3]]
+
+    chosenPuzzle3 = int(input("Which among the 3x3 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+    if chosenPuzzle3 == 1:
+        finalPuzzle = puzzle3_1
+    elif chosenPuzzle3 == 2:
+        finalPuzzle = puzzle3_2
+    elif chosenPuzzle3 == 3:
+        finalPuzzle = puzzle3_3
+    elif chosenPuzzle3 == 4:
+        finalPuzzle = puzzle3_4
+    elif chosenPuzzle3 == 5:
+        finalPuzzle = puzzle3_5
+
 elif size == 6:
     puzzleSize = 6
     subBoxDividerX = 2
@@ -33,6 +54,7 @@ elif size == 6:
     subBoxMultiplierX = 3
     subBoxMultiplierY = 2
     answerRangeIndex = 7
+
 elif size == 9:
     puzzleSize = 9
     subBoxDividerX = 3
@@ -41,12 +63,6 @@ elif size == 9:
     subBoxMultiplierY = 3
     answerRangeIndex = 10
 
-# 3 by 3 puzzles
-puzzle3_1 = [[2, 0, 3], [1, 0, 0], [0, 0, 1]]
-puzzle3_2 = [[1, 0, 0], [0, 2, 0], [0, 0, 3]]
-puzzle3_3 = [[0, 1, 0], [0, 0, 3], [2, 0, 0]]
-puzzle3_4 = [[0, 3, 0], [0, 1, 0], [1, 0, 0]]
-puzzle3_5 = [[0, 0, 1], [1, 0, 0], [0, 0, 3]]
 
 # 6 by 6 puzzles
 puzzle6_1 =[[5, 0, 3, 1, 0, 6], [0, 4, 1, 0, 3, 0], [1, 0, 0, 0, 2, 5], [2, 5, 0, 0, 0, 4], [0, 1, 0, 2, 6, 0], [3, 0, 2, 4, 0, 1]]
@@ -70,52 +86,52 @@ puzzle9_4 = [[5, 3, 0, 0, 7, 0, 0, 0, 0], [6, 0, 0, 1, 9, 5, 0, 0, 0], [0, 9, 8,
 
 puzzle9_5 = [[0, 2, 6, 0, 0, 0, 8, 1, 0], [3, 0, 0, 7, 0, 8, 0, 0, 6], [4, 0, 0, 0, 5, 0, 0, 0, 7], [0, 5, 0, 1, 0, 7, 0, 9, 0], [0, 0, 3, 9, 0, 5, 1, 0, 0], [0, 4, 0, 3, 0, 2, 0, 5, 0], [1, 0, 0, 0, 3, 0, 0, 0, 2], [5, 0, 0, 2, 0, 4, 0, 0, 9], [0, 3, 8, 0, 0, 0, 4, 6, 0]]
 
-chosenPuzzle = int(input("Which puzzle do you want to find a solution for? (1/2/3/4/5): "))
-if chosenPuzzle == 1:
-    chosenPuzzle = puzzle9_1
-elif chosenPuzzle == 2:
-    chosenPuzzle = puzzle9_2
-elif chosenPuzzle == 3:
-    chosenPuzzle = puzzle9_3
-elif chosenPuzzle == 4:
-    chosenPuzzle = puzzle9_4
-elif chosenPuzzle == 5:
-    chosenPuzzle = puzzle9_5
+# chosenPuzzle = int(input("Which puzzle do you want to find a solution for? (1/2/3/4/5): "))
+# if chosenPuzzle == 1:
+#     chosenPuzzle = puzzle9_1
+# elif chosenPuzzle == 2:
+#     chosenPuzzle = puzzle9_2
+# elif chosenPuzzle == 3:
+#     chosenPuzzle = puzzle9_3
+# elif chosenPuzzle == 4:
+#     chosenPuzzle = puzzle9_4
+# elif chosenPuzzle == 5:
+#     chosenPuzzle = puzzle9_5
 
-print(np.matrix(chosenPuzzle))
+print(np.matrix(finalPuzzle))
 
 def possible(row, column, answer):
-    global chosenPuzzle
+    global finalPuzzle
 
     for i in range(0, puzzleSize): # checks if the number is already in the row 
-        if chosenPuzzle [row][i] == answer:
+        if finalPuzzle [row][i] == answer:
             return False
 
     for i in range(0, puzzleSize): # checks if the number is already in the column 
-        if chosenPuzzle [i][column] == answer:
+        if finalPuzzle [i][column] == answer:
             return False
 
     subBoxRow = (row // subBoxDividerY) * subBoxMultiplierY
     subBoxCol = (column // subBoxDividerX) * subBoxMultiplierX
     for i in range(0, subBoxMultiplierY): # checks if the number is already in the sub box of the puzzle 
         for j in range(0, subBoxMultiplierY):
-            if chosenPuzzle[subBoxRow + i][subBoxCol + j] == answer:
+            if finalPuzzle[subBoxRow + i][subBoxCol + j] == answer:
                 return False
 
     return True
 
 def solve():
-    global chosenPuzzle
+    global finalPuzzle
     for row in range(puzzleSize):
         for column in range(puzzleSize):
-            if chosenPuzzle[row][column] == 0: # checks if the certain spot is blank
+            if finalPuzzle[row][column] == 0: # checks if the certain spot is blank
                 for answer in range(1, answerRangeIndex): # iterates numbers 1 to 9 to the blank spot
                     if possible(row, column, answer):
-                        chosenPuzzle[row][column] = answer # if the number satisfies the rules of the puzzle, it will be written
+                        finalPuzzle[row][column] = answer # if the number satisfies the rules of the puzzle, it will be written
                         solve()
-                        chosenPuzzle[row][column] = 0 # if the number does not satisfy the rules, it will go back to 0 or be blank again
+                        finalPuzzle[row][column] = 0 # if the number does not satisfy the rules, it will go back to 0 or be blank again
                 return
     
-    print(np.matrix(chosenPuzzle))
+    print(np.matrix(finalPuzzle))
 
 solve()
