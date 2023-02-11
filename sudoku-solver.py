@@ -38,7 +38,18 @@ while True:
         puzzle3_4 = [[0, 3, 0], [0, 1, 0], [1, 0, 0]]
         puzzle3_5 = [[0, 0, 1], [1, 0, 0], [0, 0, 3]]
 
-        chosenPuzzle3 = int(input("Which among the 3x3 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+        print("\nPuzzle 1:")
+        print(np.matrix(puzzle3_1))
+        print("\nPuzzle 2:")
+        print(np.matrix(puzzle3_2))
+        print("\nPuzzle 3:")
+        print(np.matrix(puzzle3_3))
+        print("\nPuzzle 4:")
+        print(np.matrix(puzzle3_4))
+        print("\nPuzzle 5:")
+        print(np.matrix(puzzle3_5))
+
+        chosenPuzzle3 = int(input("\nWhich among the 3x3 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
         if chosenPuzzle3 == 1:
             finalPuzzle = puzzle3_1
         elif chosenPuzzle3 == 2:
@@ -169,9 +180,9 @@ while True:
         break
 
     else:
-        print("Options are only 3, 4, 6, 8, and 9.")
+        print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
 
-
+print("\nYour Chosen Puzzle:")
 print(np.matrix(finalPuzzle))
 
 def possible(row, column, answer):
@@ -205,7 +216,9 @@ def solve():
                         solve()
                         finalPuzzle[row][column] = 0 # if the number does not satisfy the rules, it will go back to 0 or be blank again
                 return
-                
+    
+    print("\nSolution:")
     print(np.matrix(finalPuzzle))
+    print()
 
 solve()
