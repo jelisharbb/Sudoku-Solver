@@ -158,6 +158,17 @@ while True:
         puzzle8_4 = [[3, 0, 8, 0, 0, 1, 0, 5], [0, 0, 0, 7, 8, 0, 0, 0], [4, 0, 1, 0, 0, 8, 0, 3], [0, 8, 0, 2, 5, 0, 4, 0], [0, 5, 0, 1, 3, 0, 7, 0], [8, 0, 7, 0, 0, 6, 0, 2], [0, 0, 0, 6, 2, 0, 0, 0], [7, 0, 2, 0, 0, 5, 0, 6]]
         puzzle8_5 = [[0, 0, 7, 0, 0, 0, 6, 0], [0, 0, 0, 0, 2, 4, 0, 1], [0, 0, 0, 5, 0, 8, 0, 2], [2, 0, 0, 6, 0, 0, 4, 0], [0, 7, 0, 0, 3, 0, 0, 8], [6, 0, 3, 0, 5, 0, 0, 0], [3, 0, 1, 7, 0, 0, 0, 0], [0, 2, 0, 0, 0, 1, 0, 0]]
 
+        print("\nPuzzle 1:")
+        print(np.matrix(puzzle8_1))
+        print("\nPuzzle 2:")
+        print(np.matrix(puzzle8_2))
+        print("\nPuzzle 3:")
+        print(np.matrix(puzzle8_3))
+        print("\nPuzzle 4:")
+        print(np.matrix(puzzle8_4))
+        print("\nPuzzle 5:")
+        print(np.matrix(puzzle8_5))
+
         chosenPuzzle8 = int(input("Which among the 8x8 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
         if chosenPuzzle8 == 1:
             finalPuzzle = puzzle8_1
