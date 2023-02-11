@@ -25,10 +25,12 @@ while True:
     if puzzle.isdigit():
         puzzle = int(puzzle)
 
+        # if the user wants to find the solution to the given puzzles
         if puzzle == 1:
             while True: 
                 size = input("\nWhat size of the puzzle do you want to find a solution for? (3/4/6/8/9): ")
 
+                # if the user enters integers, it will proceed to choosing puzzles
                 if size.isdigit():
                     size = int(size)
 
@@ -234,11 +236,18 @@ while True:
 
                     else:
                         print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
-                    
+                
                 else:
                     print("Enter numbers only.")
 
-        break
+            break
+
+        elif puzzle == 2:
+            while True: 
+                size = input("\nWhat is the size of your puzzle? (3/4/6/8/9): ")
+                
+                if size.isdigit():
+                    size = int(size)
 
     else:
         print("Choose between 1 and 2 only.")
