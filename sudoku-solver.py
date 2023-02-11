@@ -252,6 +252,13 @@ while True:
 
                     if size == 3:
                         while True: 
+                            puzzleSize = 3
+                            subBoxDividerX = 1
+                            subBoxDividerY = 1
+                            subBoxMultiplierX = 1
+                            subBoxMultiplierY = 1
+                            answerRangeIndex = 4
+
                             userPuzzleRow = list(input("Row: "))
                             integers = []
 
@@ -260,8 +267,8 @@ while True:
                             finalPuzzle.append(integers)
 
                             if len(finalPuzzle) == 3:
-                                print("Row " + str(len(finalPuzzle))  + " complete")
                                 break
+                            print("Row " + str(len(finalPuzzle))  + " complete")
 
                         break
 
