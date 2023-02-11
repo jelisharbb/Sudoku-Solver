@@ -18,7 +18,7 @@ subBoxDividerX = 0
 subBoxDividerY = 0
 answerRangeIndex = 0
 
-size = int(input("What size of the puzzle do you want to find a solution for? (3/4/6/9): "))
+size = int(input("What size of the puzzle do you want to find a solution for? (3/4/6/8/9): "))
 
 if size == 3:
     puzzleSize = 3
@@ -100,6 +100,14 @@ if size == 4:
 #         finalPuzzle = puzzle6_4
 #     elif chosenPuzzle6 == 5:
 #         finalPuzzle = puzzle6_5
+
+elif size == 8:
+    puzzleSize = 8
+    subBoxDividerX = 4
+    subBoxDividerY = 2
+    subBoxMultiplierX = 4
+    subBoxMultiplierY = 2
+    answerRangeIndex = 9
 
 elif size == 9:
     puzzleSize = 9
