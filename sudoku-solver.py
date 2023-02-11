@@ -78,6 +78,17 @@ while True:
         puzzle4_4 = [[0, 4, 0, 0], [2, 0, 3, 4], [1, 3, 0, 0], [0, 0, 0, 0]]
         puzzle4_5 = [[4, 0, 0, 0], [0, 1, 0, 3], [0, 0, 0, 0], [1, 0, 3, 0]]
 
+        print("\nPuzzle 1:")
+        print(np.matrix(puzzle4_1))
+        print("\nPuzzle 2:")
+        print(np.matrix(puzzle4_2))
+        print("\nPuzzle 3:")
+        print(np.matrix(puzzle4_3))
+        print("\nPuzzle 4:")
+        print(np.matrix(puzzle4_4))
+        print("\nPuzzle 5:")
+        print(np.matrix(puzzle4_5))
+
         chosenPuzzle4 = int(input("Which among the 4x4 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
         if chosenPuzzle4 == 1:
             finalPuzzle = puzzle4_1
