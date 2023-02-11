@@ -116,6 +116,18 @@ elif size == 8:
     puzzle8_4 = [[3, 0, 8, 0, 0, 1, 0, 5], [0, 0, 0, 7, 8, 0, 0, 0], [4, 0, 1, 0, 0, 8, 0, 3], [0, 8, 0, 2, 5, 0, 4, 0], [0, 5, 0, 1, 3, 0, 7, 0], [8, 0, 7, 0, 0, 6, 0, 2], [0, 0, 0, 6, 2, 0, 0, 0], [7, 0, 2, 0, 0, 5, 0, 6]]
     puzzle8_5 = [[0, 0, 7, 0, 0, 0, 6, 0], [0, 0, 0, 0, 2, 4, 0, 1], [0, 0, 0, 5, 0, 8, 0, 2], [2, 0, 0, 6, 0, 0, 4, 0], [0, 7, 0, 0, 3, 0, 0, 8], [6, 0, 3, 0, 5, 0, 0, 0], [3, 0, 1, 7, 0, 0, 0, 0], [0, 2, 0, 0, 0, 1, 0, 0]]
 
+    chosenPuzzle8 = int(input("Which among the 8x8 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+    if chosenPuzzle8 == 1:
+        finalPuzzle = puzzle8_1
+    elif chosenPuzzle8 == 2:
+        finalPuzzle = puzzle8_2
+    elif chosenPuzzle8 == 3:
+        finalPuzzle = puzzle8_3
+    elif chosenPuzzle8 == 4:
+        finalPuzzle = puzzle8_4
+    elif chosenPuzzle8 == 5:
+        finalPuzzle = puzzle8_5
+
 elif size == 9:
     puzzleSize = 9
     subBoxDividerX = 3
