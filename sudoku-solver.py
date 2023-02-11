@@ -251,16 +251,22 @@ while True:
                     size = int(size)
 
                     if size == 3:
-                        while True: 
-                            puzzleSize = 3
-                            subBoxDividerX = 1
-                            subBoxDividerY = 1
-                            subBoxMultiplierX = 1
-                            subBoxMultiplierY = 1
-                            answerRangeIndex = 4
+                        puzzleSize = 3
+                        subBoxDividerX = 1
+                        subBoxDividerY = 1
+                        subBoxMultiplierX = 1
+                        subBoxMultiplierY = 1
+                        answerRangeIndex = 4
 
-                            userPuzzleRow = list(input("Row: "))
-                            integers = []
+                        while True: 
+                            while True:
+                                userPuzzleRow = list(input("Row: "))
+                                integers = []
+                                
+                                if len(userPuzzleRow) != 3:
+                                    print("Make sure to enter 3 numbers.")
+                                else:
+                                    break
 
                             for n in userPuzzleRow:
                                 integers.append(int(n))
@@ -272,7 +278,8 @@ while True:
 
                         break
 
-                    break
+                    else:
+                        print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
 
                 else:
                     print("Enter numbers only.")
