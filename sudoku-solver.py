@@ -299,6 +299,33 @@ while True:
                                 print("Row " + str(len(finalPuzzle))  + " complete")
                             break
 
+                        elif size == 6:
+                            puzzleSize = 6
+                            subBoxDividerX = 3
+                            subBoxDividerY = 2
+                            subBoxMultiplierX = 3
+                            subBoxMultiplierY = 2
+                            answerRangeIndex = 7
+
+                            while True: 
+                                while True:
+                                    userPuzzleRow = list(input("Row: "))
+                                    integers = []
+
+                                    if len(userPuzzleRow) != 6:
+                                        print("Make sure to enter 6 numbers.")
+                                    else:
+                                        break
+
+                                for n in userPuzzleRow:
+                                    integers.append(int(n))
+                                finalPuzzle.append(integers)
+
+                                if len(finalPuzzle) == 6:
+                                    break
+                                print("Row " + str(len(finalPuzzle))  + " complete")
+                            break
+
                         else:
                             print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
 
