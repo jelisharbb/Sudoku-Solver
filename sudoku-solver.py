@@ -4,12 +4,14 @@ print("\n==================== SUDOKU SOLVER ====================")
 print("Can't find the solution to your sudoku puzzle? Fret not, \nbecause we've got you! This program will find it for you.")
 
 while True:
-    readiness = input("\nDo you want to proceed? ")
+    readiness = input("\nDo you want to proceed? (Yes/No): ")
     if readiness.lower() == "yes":
         break
     elif readiness.lower() == "no":
-        print("\nGood bye...")
+        print("\n====================== GOOD BYE ======================\n")
         exit()
+    else:
+        print("Answer yes or no only.")
 
 puzzleSize = 0
 subBoxMultiplierX = 0
@@ -74,32 +76,32 @@ if size == 4:
     elif chosenPuzzle4 == 5:
         finalPuzzle = puzzle4_5
 
-# elif size == 6:
-#     puzzleSize = 6
-#     subBoxDividerX = 2
-#     subBoxDividerY = 3
-#     subBoxMultiplierX = 2
-#     subBoxMultiplierY = 3
-#     answerRangeIndex = 7
+elif size == 6:
+    puzzleSize = 6
+    subBoxDividerX = 3
+    subBoxDividerY = 2
+    subBoxMultiplierX = 3
+    subBoxMultiplierY = 2
+    answerRangeIndex = 7
 
-#     # 6 by 6 puzzles
-#     puzzle6_1 =[[0, 0, 6, 0, 1, 0], [4, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2], [6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 4, 5], [0, 2, 0, 3, 0, 0]]
-#     puzzle6_2 =[[0, 0, 1, 0, 0, 0], [0, 0, 0, 6, 0, 0], [1, 0, 0, 0, 3, 0], [0, 4, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0]]
-#     puzzle6_3 =[[0, 0, 0, 1, 5, 0], [2, 5, 1, 0, 3, 0], [1, 0, 2, 3, 4, 0], [0, 3, 5, 2, 0, 6], [0, 1, 0, 4, 2, 3], [0, 2, 4, 0, 0, 0]]
-#     puzzle6_4 =[[1, 0, 0, 4, 6, 3], [3, 6, 4, 0, 2, 0], [5, 0, 0, 0, 4, 0], [0, 2, 0, 0, 0, 1], [0, 4, 0, 5, 3, 2], [2, 3, 5, 0, 0, 4]]
-#     puzzle6_5 =[[1, 0, 4, 6, 0, 5], [0, 0, 0, 1, 0, 0], [6, 1, 5, 4, 0, 2], [3, 0, 2, 5, 6, 1], [0, 0, 3, 0, 0, 0], [2, 0, 1, 3, 0, 4]]
+    # 6 by 6 puzzles
+    puzzle6_1 =[[0, 0, 6, 0, 1, 0], [4, 1, 0, 0, 0, 0], [0, 0, 0, 0, 0, 2], [6, 0, 0, 0, 0, 0], [0, 0, 0, 0, 4, 5], [0, 2, 0, 3, 0, 0]]
+    puzzle6_2 =[[0, 0, 1, 0, 0, 0], [0, 0, 0, 6, 0, 0], [1, 0, 0, 0, 3, 0], [0, 4, 0, 0, 0, 2], [0, 0, 2, 0, 0, 0], [0, 0, 0, 2, 0, 0]]
+    puzzle6_3 =[[0, 0, 0, 1, 5, 0], [2, 5, 1, 0, 3, 0], [1, 0, 2, 3, 4, 0], [0, 3, 5, 2, 0, 6], [0, 1, 0, 4, 2, 3], [0, 2, 4, 0, 0, 0]]
+    puzzle6_4 =[[1, 0, 0, 4, 6, 3], [3, 6, 4, 0, 2, 0], [5, 0, 0, 0, 4, 0], [0, 2, 0, 0, 0, 1], [0, 4, 0, 5, 3, 2], [2, 3, 5, 0, 0, 4]]
+    puzzle6_5 =[[1, 0, 4, 6, 0, 5], [0, 0, 0, 1, 0, 0], [6, 1, 5, 4, 0, 2], [3, 0, 2, 5, 6, 1], [0, 0, 3, 0, 0, 0], [2, 0, 1, 3, 0, 4]]
 
-#     chosenPuzzle6 = int(input("Which among the 6x6 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
-#     if chosenPuzzle6 == 1:
-#         finalPuzzle = puzzle6_1
-#     elif chosenPuzzle6 == 2:
-#         finalPuzzle = puzzle6_2
-#     elif chosenPuzzle6 == 3:
-#         finalPuzzle = puzzle6_3
-#     elif chosenPuzzle6 == 4:
-#         finalPuzzle = puzzle6_4
-#     elif chosenPuzzle6 == 5:
-#         finalPuzzle = puzzle6_5
+    chosenPuzzle6 = int(input("Which among the 6x6 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+    if chosenPuzzle6 == 1:
+        finalPuzzle = puzzle6_1
+    elif chosenPuzzle6 == 2:
+        finalPuzzle = puzzle6_2
+    elif chosenPuzzle6 == 3:
+        finalPuzzle = puzzle6_3
+    elif chosenPuzzle6 == 4:
+        finalPuzzle = puzzle6_4
+    elif chosenPuzzle6 == 5:
+        finalPuzzle = puzzle6_5
 
 elif size == 8:
     puzzleSize = 8
@@ -188,7 +190,7 @@ def solve():
                         solve()
                         finalPuzzle[row][column] = 0 # if the number does not satisfy the rules, it will go back to 0 or be blank again
                 return
-    
+                
     print(np.matrix(finalPuzzle))
 
 solve()
