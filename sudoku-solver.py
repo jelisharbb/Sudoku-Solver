@@ -62,6 +62,17 @@ if size == 4:
     puzzle4_4 = [[0, 4, 0, 0], [2, 0, 3, 4], [1, 3, 0, 0], [0, 0, 0, 0]]
     puzzle4_5 = [[4, 0, 0, 0], [0, 1, 0, 3], [0, 0, 0, 0], [1, 0, 3, 0]]
 
+    chosenPuzzle4 = int(input("Which among the 4x4 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+    if chosenPuzzle4 == 1:
+        finalPuzzle = puzzle4_1
+    elif chosenPuzzle4 == 2:
+        finalPuzzle = puzzle4_2
+    elif chosenPuzzle4 == 3:
+        finalPuzzle = puzzle4_3
+    elif chosenPuzzle4 == 4:
+        finalPuzzle = puzzle4_4
+    elif chosenPuzzle4 == 5:
+        finalPuzzle = puzzle4_5
 
 # elif size == 6:
 #     puzzleSize = 6
