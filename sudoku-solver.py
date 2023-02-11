@@ -118,6 +118,17 @@ while True:
         puzzle6_4 =[[1, 0, 0, 4, 6, 3], [3, 6, 4, 0, 2, 0], [5, 0, 0, 0, 4, 0], [0, 2, 0, 0, 0, 1], [0, 4, 0, 5, 3, 2], [2, 3, 5, 0, 0, 4]]
         puzzle6_5 =[[1, 0, 4, 6, 0, 5], [0, 0, 0, 1, 0, 0], [6, 1, 5, 4, 0, 2], [3, 0, 2, 5, 6, 1], [0, 0, 3, 0, 0, 0], [2, 0, 1, 3, 0, 4]]
 
+        print("\nPuzzle 1:")
+        print(np.matrix(puzzle6_1))
+        print("\nPuzzle 2:")
+        print(np.matrix(puzzle6_2))
+        print("\nPuzzle 3:")
+        print(np.matrix(puzzle6_3))
+        print("\nPuzzle 4:")
+        print(np.matrix(puzzle6_4))
+        print("\nPuzzle 5:")
+        print(np.matrix(puzzle6_5))
+
         chosenPuzzle6 = int(input("Which among the 6x6 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
         if chosenPuzzle6 == 1:
             finalPuzzle = puzzle6_1
