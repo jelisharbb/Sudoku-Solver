@@ -19,6 +19,7 @@ subBoxMultiplierY = 0
 subBoxDividerX = 0
 subBoxDividerY = 0
 answerRangeIndex = 0
+finalPuzzle = []
 
 while True:
     puzzle = input("\nPress 1 if you want to find the solution to the puzzle in this program. \nPress 2 if you want to find the solution to your own puzzle.\nAnswer: ")
@@ -248,6 +249,28 @@ while True:
                 
                 if size.isdigit():
                     size = int(size)
+
+                    if size == 3:
+                        while True: 
+                            userPuzzleRow = list(input("Row: "))
+                            integers = []
+
+                            for n in userPuzzleRow:
+                                integers.append(int(n))
+                            finalPuzzle.append(integers)
+
+                            if len(finalPuzzle) == 3:
+                                print("Row " + str(len(finalPuzzle))  + " complete")
+                                break
+
+                        break
+
+                    break
+
+                else:
+                    print("Enter numbers only.")
+
+            break
 
     else:
         print("Choose between 1 and 2 only.")
