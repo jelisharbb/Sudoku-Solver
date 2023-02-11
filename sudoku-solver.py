@@ -13,15 +13,14 @@ while True:
     else:
         print("Answer yes or no only.")
 
-puzzleSize = 0
-subBoxMultiplierX = 0
-subBoxMultiplierY = 0
-subBoxDividerX = 0
-subBoxDividerY = 0
-answerRangeIndex = 0
-finalPuzzle = []
-
 while True: 
+    puzzleSize = 0
+    subBoxMultiplierX = 0
+    subBoxMultiplierY = 0
+    subBoxDividerX = 0
+    subBoxDividerY = 0
+    answerRangeIndex = 0
+    finalPuzzle = []
 
     while True:
         puzzle = input("\nPress 1 if you want to find the solution to the puzzle in this program. \nPress 2 if you want to find the solution to your own puzzle.\nAnswer: ")
@@ -269,6 +268,33 @@ while True:
                                 finalPuzzle.append(integers)
 
                                 if len(finalPuzzle) == 3:
+                                    break
+                                print("Row " + str(len(finalPuzzle))  + " complete")
+                            break
+
+                        elif size == 4:
+                            puzzleSize = 4
+                            subBoxDividerX = 2
+                            subBoxDividerY = 2
+                            subBoxMultiplierX = 2
+                            subBoxMultiplierY = 2
+                            answerRangeIndex = 5
+
+                            while True: 
+                                while True:
+                                    userPuzzleRow = list(input("Row: "))
+                                    integers = []
+
+                                    if len(userPuzzleRow) != 4:
+                                        print("Make sure to enter 4 numbers.")
+                                    else:
+                                        break
+
+                                for n in userPuzzleRow:
+                                    integers.append(int(n))
+                                finalPuzzle.append(integers)
+
+                                if len(finalPuzzle) == 4:
                                     break
                                 print("Row " + str(len(finalPuzzle))  + " complete")
                             break
