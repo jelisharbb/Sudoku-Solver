@@ -353,6 +353,32 @@ while True:
                                 print("Row " + str(len(finalPuzzle))  + " complete")
                             break
 
+                        elif size == 9:
+                            puzzleSize = 9
+                            subBoxDividerX = 3
+                            subBoxDividerY = 3
+                            subBoxMultiplierX = 3
+                            subBoxMultiplierY = 3
+                            answerRangeIndex = 10
+
+                            while True: 
+                                while True:
+                                    userPuzzleRow = list(input("Row: "))
+                                    integers = []
+
+                                    if len(userPuzzleRow) != 9:
+                                        print("Make sure to enter 9 numbers.")
+                                    else:
+                                        break
+
+                                for n in userPuzzleRow:
+                                    integers.append(int(n))
+                                finalPuzzle.append(integers)
+
+                                if len(finalPuzzle) == 9:
+                                    break
+                                print("Row " + str(len(finalPuzzle))  + " complete")
+                            break
 
                         else:
                             print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
