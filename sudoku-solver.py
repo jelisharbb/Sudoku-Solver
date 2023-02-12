@@ -266,17 +266,29 @@ while True:
                             print("\n\033[1m\033[96mPuzzle 5:\033[0m")
                             print(np.matrix(puzzle9_5))
 
-                            chosenPuzzle6 = int(input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")) 
-                            if chosenPuzzle6 == 1:
-                                finalPuzzle = puzzle9_1
-                            elif chosenPuzzle6 == 2:
-                                finalPuzzle = puzzle9_2
-                            elif chosenPuzzle6 == 3:
-                                finalPuzzle = puzzle9_3
-                            elif chosenPuzzle6 == 4:
-                                finalPuzzle = puzzle9_4
-                            elif chosenPuzzle6 == 5:
-                                finalPuzzle = puzzle9_5
+                            while True:
+                                chosenPuzzle6 = input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                if chosenPuzzle6.isdigit():
+                                    chosenPuzzle6 = int(chosenPuzzle6)
+                                    if chosenPuzzle6 == 1:
+                                        finalPuzzle = puzzle9_1
+                                        break
+                                    elif chosenPuzzle6 == 2:
+                                        finalPuzzle = puzzle9_2
+                                        break
+                                    elif chosenPuzzle6 == 3:
+                                        finalPuzzle = puzzle9_3
+                                        break
+                                    elif chosenPuzzle6 == 4:
+                                        finalPuzzle = puzzle9_4
+                                        break
+                                    elif chosenPuzzle6 == 5:
+                                        finalPuzzle = puzzle9_5
+                                        break
+                                    else:
+                                        print("\033[1m\033[91mYou can only choose from 1 to 5.\033[0m")
+                                else:
+                                    print("\033[1m\033[91mYou can only choose from 1 to 5.\033[0m")
                             break
 
                         else:
