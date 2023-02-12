@@ -8,16 +8,19 @@ def typewriter(message):
     for char in message:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.03)
+        time.sleep(0.02)
 
 typewriter(message)
 
 while True:
-    readiness = input("\nDo you want to proceed? \033[1m(Yes/No)\033[0m\n\033[3mAnswer:\033[0m ")
+    message = "\nDo you want to proceed? \033[1m(Yes/No)"
+    typewriter(message)
+    readiness = input("\033[0m\n\033[3mAnswer:\033[0m ")
     if readiness.lower() == "yes":
         break
     elif readiness.lower() == "no":
         print("\n\033[1m====================== GOOD BYE ======================\033[0m\n")
+        time.sleep(1)
         exit()
     else:
         print("Answer \033[1m\033[91myes\033[0m or \033[1m\033[91mno\033[0m only.")
@@ -32,14 +35,19 @@ while True:
     finalPuzzle = []
 
     while True:
-        puzzle = input("\n\033[1mEnter 1\033[0m if you want to find the solution to the \033[4mpuzzle in this program.\033[0m \n\033[1mEnter 2\033[0m if you want to find the solution to your \033[4mown puzzle.\033[0m \n\033[3mAnswer:\033[0m ")
+        message = "\n\033[1mEnter 1\033[0m if you want to find the solution to the \033[4mpuzzle in this program.\033[0m \n\033[1mEnter 2\033[0m if you want to find the solution to your \033[4mown puzzle.\033[0m"
+        typewriter(message)
+        puzzle = input("\n\033[3mAnswer:\033[0m ")
+        
         if puzzle.isdigit():
             puzzle = int(puzzle)
 
             # if the user wants to find the solution to the given puzzles
             if puzzle == 1:
                 while True: 
-                    size = input("\nWhat \033[4msize of the puzzle\033[0m do you want to find a solution for? \n\033[1mEnter 3 for 3x3 \nEnter 4 for 4x4 \nEnter 6 for 6x6 \nEnter 8 for 8x8 \nEnter 9 for 9x9\033[0m \n\033[3mAnswer:\033[0m ")
+                    message = "\nWhat \033[4msize of the puzzle\033[0m do you want to find a solution for? \n\033[1mEnter 3 for 3x3 \nEnter 4 for 4x4 \nEnter 6 for 6x6 \nEnter 8 for 8x8 \nEnter 9 for 9x9\033[0m"
+                    typewriter(message)
+                    size = input("\n\033[3mAnswer:\033[0m ")
 
                     # if the user enters integers, it will proceed to choosing puzzles
                     if size.isdigit():
@@ -60,16 +68,26 @@ while True:
                             puzzle3_4 = [[0, 3, 0], [0, 1, 0], [1, 0, 0]]
                             puzzle3_5 = [[0, 0, 1], [1, 0, 0], [0, 0, 3]]
 
-                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
+                            message = "\n\033[1m\033[96mPuzzle 1:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle3_1))
-                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 2:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle3_2))
-                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 3:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle3_3))
-                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 4:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle3_4))
-                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 5:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle3_5))
+                            time.sleep(0.5)
 
                             while True: 
                                 chosenPuzzle3 = input("\nWhich among the \033[4m3x3 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
@@ -506,4 +524,5 @@ while True:
     solveAgain = input("\nDo you want to \033[4msolve again\033[0m? \033[1mPress any key\033[0m to continue or \033[1mpress Q\033[0m to quit \n\033[3mAnswer:\033[0m ")
     if solveAgain.lower() == "q":
         print("\n\033[1m====================== GOOD BYE ======================\033[0m\n")
+        time.sleep(1)
         break
