@@ -1,7 +1,16 @@
 import numpy as np
+import sys, time, os
 
 print("\n\033[1m==================== SUDOKU SOLVER ====================\033[0m")
-print("Can't find the solution to your sudoku puzzle? Fret not, \nbecause we've got you! This program will find it for you.")
+message = "Can't find the solution to your sudoku puzzle? Fret not, \nbecause we've got you! This program will find it for you.\n"
+
+def typewriter(message):
+    for char in message:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.03)
+
+typewriter(message)
 
 while True:
     readiness = input("\nDo you want to proceed? \033[1m(Yes/No)\033[0m\n\033[3mAnswer:\033[0m ")
