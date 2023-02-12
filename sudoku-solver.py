@@ -129,16 +129,26 @@ while True:
                             puzzle4_4 = [[0, 4, 0, 0], [2, 0, 3, 4], [1, 3, 0, 0], [0, 0, 0, 0]]
                             puzzle4_5 = [[4, 0, 0, 0], [0, 1, 0, 3], [0, 0, 0, 0], [1, 0, 3, 0]]
 
-                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
+                            message = "\n\033[1m\033[96mPuzzle 1:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle4_1))
-                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 2:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle4_2))
-                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 3:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle4_3))
-                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 4:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle4_4))
-                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 5:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle4_5))
+                            time.sleep(0.5)
 
                             while True: 
                                 chosenPuzzle4 = input("\nWhich among the \033[4m4x4 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
@@ -180,16 +190,26 @@ while True:
                             puzzle6_4 =[[1, 0, 0, 4, 6, 3], [3, 6, 4, 0, 2, 0], [5, 0, 0, 0, 4, 0], [0, 2, 0, 0, 0, 1], [0, 4, 0, 5, 3, 2], [2, 3, 5, 0, 0, 4]]
                             puzzle6_5 =[[1, 0, 4, 6, 0, 5], [0, 0, 0, 1, 0, 0], [6, 1, 5, 4, 0, 2], [3, 0, 2, 5, 6, 1], [0, 0, 3, 0, 0, 0], [2, 0, 1, 3, 0, 4]]
 
-                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
+                            message = "\n\033[1m\033[96mPuzzle 1:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle6_1))
-                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 2:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle6_2))
-                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 3:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle6_3))
-                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 4:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle6_4))
-                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 5:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle6_5))
+                            time.sleep(0.5)
 
                             while True:
                                 chosenPuzzle6 = input("\nWhich among the \033[4m6x6 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
@@ -231,16 +251,26 @@ while True:
                             puzzle8_4 = [[3, 0, 8, 0, 0, 1, 0, 5], [0, 0, 0, 7, 8, 0, 0, 0], [4, 0, 1, 0, 0, 8, 0, 3], [0, 8, 0, 2, 5, 0, 4, 0], [0, 5, 0, 1, 3, 0, 7, 0], [8, 0, 7, 0, 0, 6, 0, 2], [0, 0, 0, 6, 2, 0, 0, 0], [7, 0, 2, 0, 0, 5, 0, 6]]
                             puzzle8_5 = [[0, 0, 7, 0, 0, 0, 6, 0], [0, 0, 0, 0, 2, 4, 0, 1], [0, 0, 0, 5, 0, 8, 0, 2], [2, 0, 0, 6, 0, 0, 4, 0], [0, 7, 0, 0, 3, 0, 0, 8], [6, 0, 3, 0, 5, 0, 0, 0], [3, 0, 1, 7, 0, 0, 0, 0], [0, 2, 0, 0, 0, 1, 0, 0]]
 
-                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
+                            message = "\n\033[1m\033[96mPuzzle 1:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle8_1))
-                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 2:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle8_2))
-                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 3:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle8_3))
-                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 4:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle8_4))
-                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 5:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle8_5))
+                            time.sleep(0.5)
 
                             while True:
                                 chosenPuzzle8 = input("\nWhich among the \033[4m8x8 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
@@ -282,16 +312,26 @@ while True:
                             puzzle9_4 = [[5, 3, 0, 0, 7, 0, 0, 0, 0], [6, 0, 0, 1, 9, 5, 0, 0, 0], [0, 9, 8, 0, 0, 0, 0, 6, 0], [8, 0, 0, 0, 6, 0, 0, 0, 3], [4, 0, 0, 8, 0, 3, 0, 0, 1], [7, 0, 0, 0, 2, 0, 0, 0, 6], [0, 6, 0, 0, 0, 0, 2, 8, 0], [0, 0, 0, 4, 1, 9, 0, 0, 5], [0, 0, 0, 0, 8, 0, 0, 7, 9]]
                             puzzle9_5 = [[0, 2, 6, 0, 0, 0, 8, 1, 0], [3, 0, 0, 7, 0, 8, 0, 0, 6], [4, 0, 0, 0, 5, 0, 0, 0, 7], [0, 5, 0, 1, 0, 7, 0, 9, 0], [0, 0, 3, 9, 0, 5, 1, 0, 0], [0, 4, 0, 3, 0, 2, 0, 5, 0], [1, 0, 0, 0, 3, 0, 0, 0, 2], [5, 0, 0, 2, 0, 4, 0, 0, 9], [0, 3, 8, 0, 0, 0, 4, 6, 0]]
 
-                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
+                            message = "\n\033[1m\033[96mPuzzle 1:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle9_1))
-                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 2:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle9_2))
-                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 3:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle9_3))
-                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 4:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle9_4))
-                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
+                            time.sleep(0.5)
+                            message = "\n\033[1m\033[96mPuzzle 5:\033[0m\n"
+                            typewriter(message)
                             print(np.matrix(puzzle9_5))
+                            time.sleep(0.5)
 
                             while True:
                                 chosenPuzzle6 = input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
