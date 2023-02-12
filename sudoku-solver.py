@@ -564,11 +564,11 @@ while True:
         message = "\n\033[1m\033[92mSolution:\033[0m\n"
         typewriter(message)
         print(np.matrix(finalPuzzle))
-        time.sleep(3)
 
     solve()
 
     message = "\nDo you want to \033[4msolve again\033[0m? \033[1mPress any key\033[0m to continue or \033[1mpress Q\033[0m to quit"
+    time.sleep(3)
     typewriter(message)
     solveAgain = input("\n\033[3mAnswer:\033[0m ")
     if solveAgain.lower() == "q":
