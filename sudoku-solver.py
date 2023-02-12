@@ -19,7 +19,8 @@ while True:
     if readiness.lower() == "yes":
         break
     elif readiness.lower() == "no":
-        print("\n\033[1m====================== GOOD BYE ======================\033[0m\n")
+        message = "\n\033[1m====================== GOOD BYE ======================\033[0m\n\n"
+        typewriter(message)
         time.sleep(1)
         exit()
     else:
@@ -334,22 +335,22 @@ while True:
                             time.sleep(0.5)
 
                             while True:
-                                chosenPuzzle6 = input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
-                                if chosenPuzzle6.isdigit():
-                                    chosenPuzzle6 = int(chosenPuzzle6)
-                                    if chosenPuzzle6 == 1:
+                                chosenPuzzle9 = input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                if chosenPuzzle9.isdigit():
+                                    chosenPuzzle9 = int(chosenPuzzle9)
+                                    if chosenPuzzle9 == 1:
                                         finalPuzzle = puzzle9_1
                                         break
-                                    elif chosenPuzzle6 == 2:
+                                    elif chosenPuzzle9 == 2:
                                         finalPuzzle = puzzle9_2
                                         break
-                                    elif chosenPuzzle6 == 3:
+                                    elif chosenPuzzle9 == 3:
                                         finalPuzzle = puzzle9_3
                                         break
-                                    elif chosenPuzzle6 == 4:
+                                    elif chosenPuzzle9 == 4:
                                         finalPuzzle = puzzle9_4
                                         break
-                                    elif chosenPuzzle6 == 5:
+                                    elif chosenPuzzle9 == 5:
                                         finalPuzzle = puzzle9_5
                                         break
                                     else:
@@ -368,7 +369,10 @@ while True:
             # if the user wants to find solution to his/her own puzzle
             elif puzzle == 2:
                 while True: 
-                    size = input("\nWhat is the \033[4msize of your puzzle\033[0m? \n\033[1mEnter 3 for 3x3 \nEnter 4 for 4x4 \nEnter 6 for 6x6 \nEnter 8 for 8x8 \nEnter 9 for 9x9\033[0m \n\033[3mAnswer:\033[0m ")
+                    message = "\nWhat is the \033[4msize of your puzzle\033[0m? \n\033[1mEnter 3 for 3x3 \nEnter 4 for 4x4 \nEnter 6 for 6x6 \nEnter 8 for 8x8 \nEnter 9 for 9x9\033[0m"
+                    typewriter(message)
+                    size = input("\n\033[3mAnswer:\033[0m ")
+
                     if size.isdigit():
                         size = int(size)
 
@@ -521,7 +525,8 @@ while True:
             print("Choose between \033[1m\033[91m1\033[0m and \033[1m\033[91m2\033[0m only.")
 
 
-    print("\n\033[1m\033[95mYour Chosen Puzzle:\033[0m")
+    message = "\n\033[1m\033[95mYour Chosen Puzzle:\033[0m\n"
+    typewriter(message)
     print(np.matrix(finalPuzzle))
 
     def possible(row, column, answer):
@@ -556,13 +561,18 @@ while True:
                             finalPuzzle[row][column] = 0 # if the number does not satisfy the rules, it will go back to 0 or be blank again
                     return
         
-        print("\n\033[1m\033[92mSolution:\033[0m")
+        message = "\n\033[1m\033[92mSolution:\033[0m\n"
+        typewriter(message)
         print(np.matrix(finalPuzzle))
+        time.sleep(3)
 
     solve()
 
-    solveAgain = input("\nDo you want to \033[4msolve again\033[0m? \033[1mPress any key\033[0m to continue or \033[1mpress Q\033[0m to quit \n\033[3mAnswer:\033[0m ")
+    message = "\nDo you want to \033[4msolve again\033[0m? \033[1mPress any key\033[0m to continue or \033[1mpress Q\033[0m to quit"
+    typewriter(message)
+    solveAgain = input("\n\033[3mAnswer:\033[0m ")
     if solveAgain.lower() == "q":
-        print("\n\033[1m====================== GOOD BYE ======================\033[0m\n")
+        message = "\n\033[1m====================== GOOD BYE ======================\033[0m\n\n"
+        typewriter(message)
         time.sleep(1)
         break
