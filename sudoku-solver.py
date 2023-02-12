@@ -1,17 +1,17 @@
 import numpy as np
 
-print("\n==================== SUDOKU SOLVER ====================")
+print("\n\033[1m==================== SUDOKU SOLVER ====================\033[0m")
 print("Can't find the solution to your sudoku puzzle? Fret not, \nbecause we've got you! This program will find it for you.")
 
 while True:
-    readiness = input("\nDo you want to proceed? (Yes/No): ")
+    readiness = input("\nDo you want to proceed? \033[1m(Yes/No)\033[0m\n\033[3mAnswer:\033[0m ")
     if readiness.lower() == "yes":
         break
     elif readiness.lower() == "no":
-        print("\n====================== GOOD BYE ======================\n")
+        print("\n\033[1m====================== GOOD BYE ======================\033[0m\n")
         exit()
     else:
-        print("Answer yes or no only.")
+        print("Answer \033[1m\033[91myes\033[0m or \033[1m\033[91mno\033[0m only.")
 
 while True: 
     puzzleSize = 0
@@ -23,14 +23,14 @@ while True:
     finalPuzzle = []
 
     while True:
-        puzzle = input("\nPress 1 if you want to find the solution to the puzzle in this program. \nPress 2 if you want to find the solution to your own puzzle.\nAnswer: ")
+        puzzle = input("\n\033[1mEnter 1\033[0m if you want to find the solution to the \033[4mpuzzle in this program.\033[0m \n\033[1mEnter 2\033[0m if you want to find the solution to your \033[4mown puzzle.\033[0m \n\033[3mAnswer:\033[0m ")
         if puzzle.isdigit():
             puzzle = int(puzzle)
 
             # if the user wants to find the solution to the given puzzles
             if puzzle == 1:
                 while True: 
-                    size = input("\nWhat size of the puzzle do you want to find a solution for? (3/4/6/8/9): ")
+                    size = input("\nWhat \033[4msize of the puzzle\033[0m do you want to find a solution for? \n\033[1mEnter 3 for 3x3 \nEnter 4 for 4x4 \nEnter 6 for 6x6 \nEnter 8 for 8x8 \nEnter 9 for 9x9\033[0m \n\033[3mAnswer:\033[0m ")
 
                     # if the user enters integers, it will proceed to choosing puzzles
                     if size.isdigit():
@@ -51,18 +51,18 @@ while True:
                             puzzle3_4 = [[0, 3, 0], [0, 1, 0], [1, 0, 0]]
                             puzzle3_5 = [[0, 0, 1], [1, 0, 0], [0, 0, 3]]
 
-                            print("\nPuzzle 1:")
+                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
                             print(np.matrix(puzzle3_1))
-                            print("\nPuzzle 2:")
+                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
                             print(np.matrix(puzzle3_2))
-                            print("\nPuzzle 3:")
+                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
                             print(np.matrix(puzzle3_3))
-                            print("\nPuzzle 4:")
+                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
                             print(np.matrix(puzzle3_4))
-                            print("\nPuzzle 5:")
+                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
                             print(np.matrix(puzzle3_5))
 
-                            chosenPuzzle3 = int(input("\nWhich among the 3x3 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+                            chosenPuzzle3 = int(input("\nWhich among the \033[4m3x3 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")) 
                             if chosenPuzzle3 == 1:
                                 finalPuzzle = puzzle3_1
                             elif chosenPuzzle3 == 2:
@@ -90,18 +90,18 @@ while True:
                             puzzle4_4 = [[0, 4, 0, 0], [2, 0, 3, 4], [1, 3, 0, 0], [0, 0, 0, 0]]
                             puzzle4_5 = [[4, 0, 0, 0], [0, 1, 0, 3], [0, 0, 0, 0], [1, 0, 3, 0]]
 
-                            print("\nPuzzle 1:")
+                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
                             print(np.matrix(puzzle4_1))
-                            print("\nPuzzle 2:")
+                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
                             print(np.matrix(puzzle4_2))
-                            print("\nPuzzle 3:")
+                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
                             print(np.matrix(puzzle4_3))
-                            print("\nPuzzle 4:")
+                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
                             print(np.matrix(puzzle4_4))
-                            print("\nPuzzle 5:")
+                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
                             print(np.matrix(puzzle4_5))
 
-                            chosenPuzzle4 = int(input("\nWhich among the 4x4 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+                            chosenPuzzle4 = int(input("\nWhich among the \033[4m4x4 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")) 
                             if chosenPuzzle4 == 1:
                                 finalPuzzle = puzzle4_1
                             elif chosenPuzzle4 == 2:
@@ -129,18 +129,18 @@ while True:
                             puzzle6_4 =[[1, 0, 0, 4, 6, 3], [3, 6, 4, 0, 2, 0], [5, 0, 0, 0, 4, 0], [0, 2, 0, 0, 0, 1], [0, 4, 0, 5, 3, 2], [2, 3, 5, 0, 0, 4]]
                             puzzle6_5 =[[1, 0, 4, 6, 0, 5], [0, 0, 0, 1, 0, 0], [6, 1, 5, 4, 0, 2], [3, 0, 2, 5, 6, 1], [0, 0, 3, 0, 0, 0], [2, 0, 1, 3, 0, 4]]
 
-                            print("\nPuzzle 1:")
+                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
                             print(np.matrix(puzzle6_1))
-                            print("\nPuzzle 2:")
+                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
                             print(np.matrix(puzzle6_2))
-                            print("\nPuzzle 3:")
+                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
                             print(np.matrix(puzzle6_3))
-                            print("\nPuzzle 4:")
+                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
                             print(np.matrix(puzzle6_4))
-                            print("\nPuzzle 5:")
+                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
                             print(np.matrix(puzzle6_5))
 
-                            chosenPuzzle6 = int(input("\nWhich among the 6x6 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+                            chosenPuzzle6 = int(input("\nWhich among the \033[4m6x6 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")) 
                             if chosenPuzzle6 == 1:
                                 finalPuzzle = puzzle6_1
                             elif chosenPuzzle6 == 2:
@@ -168,18 +168,18 @@ while True:
                             puzzle8_4 = [[3, 0, 8, 0, 0, 1, 0, 5], [0, 0, 0, 7, 8, 0, 0, 0], [4, 0, 1, 0, 0, 8, 0, 3], [0, 8, 0, 2, 5, 0, 4, 0], [0, 5, 0, 1, 3, 0, 7, 0], [8, 0, 7, 0, 0, 6, 0, 2], [0, 0, 0, 6, 2, 0, 0, 0], [7, 0, 2, 0, 0, 5, 0, 6]]
                             puzzle8_5 = [[0, 0, 7, 0, 0, 0, 6, 0], [0, 0, 0, 0, 2, 4, 0, 1], [0, 0, 0, 5, 0, 8, 0, 2], [2, 0, 0, 6, 0, 0, 4, 0], [0, 7, 0, 0, 3, 0, 0, 8], [6, 0, 3, 0, 5, 0, 0, 0], [3, 0, 1, 7, 0, 0, 0, 0], [0, 2, 0, 0, 0, 1, 0, 0]]
 
-                            print("\nPuzzle 1:")
+                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
                             print(np.matrix(puzzle8_1))
-                            print("\nPuzzle 2:")
+                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
                             print(np.matrix(puzzle8_2))
-                            print("\nPuzzle 3:")
+                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
                             print(np.matrix(puzzle8_3))
-                            print("\nPuzzle 4:")
+                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
                             print(np.matrix(puzzle8_4))
-                            print("\nPuzzle 5:")
+                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
                             print(np.matrix(puzzle8_5))
 
-                            chosenPuzzle8 = int(input("\nWhich among the 8x8 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+                            chosenPuzzle8 = int(input("\nWhich among the \033[4m8x8 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")) 
                             if chosenPuzzle8 == 1:
                                 finalPuzzle = puzzle8_1
                             elif chosenPuzzle8 == 2:
@@ -207,18 +207,18 @@ while True:
                             puzzle9_4 = [[5, 3, 0, 0, 7, 0, 0, 0, 0], [6, 0, 0, 1, 9, 5, 0, 0, 0], [0, 9, 8, 0, 0, 0, 0, 6, 0], [8, 0, 0, 0, 6, 0, 0, 0, 3], [4, 0, 0, 8, 0, 3, 0, 0, 1], [7, 0, 0, 0, 2, 0, 0, 0, 6], [0, 6, 0, 0, 0, 0, 2, 8, 0], [0, 0, 0, 4, 1, 9, 0, 0, 5], [0, 0, 0, 0, 8, 0, 0, 7, 9]]
                             puzzle9_5 = [[0, 2, 6, 0, 0, 0, 8, 1, 0], [3, 0, 0, 7, 0, 8, 0, 0, 6], [4, 0, 0, 0, 5, 0, 0, 0, 7], [0, 5, 0, 1, 0, 7, 0, 9, 0], [0, 0, 3, 9, 0, 5, 1, 0, 0], [0, 4, 0, 3, 0, 2, 0, 5, 0], [1, 0, 0, 0, 3, 0, 0, 0, 2], [5, 0, 0, 2, 0, 4, 0, 0, 9], [0, 3, 8, 0, 0, 0, 4, 6, 0]]
 
-                            print("\nPuzzle 1:")
+                            print("\n\033[1m\033[96mPuzzle 1:\033[0m")
                             print(np.matrix(puzzle9_1))
-                            print("\nPuzzle 2:")
+                            print("\n\033[1m\033[96mPuzzle 2:\033[0m")
                             print(np.matrix(puzzle9_2))
-                            print("\nPuzzle 3:")
+                            print("\n\033[1m\033[96mPuzzle 3:\033[0m")
                             print(np.matrix(puzzle9_3))
-                            print("\nPuzzle 4:")
+                            print("\n\033[1m\033[96mPuzzle 4:\033[0m")
                             print(np.matrix(puzzle9_4))
-                            print("\nPuzzle 5:")
+                            print("\n\033[1m\033[96mPuzzle 5:\033[0m")
                             print(np.matrix(puzzle9_5))
 
-                            chosenPuzzle6 = int(input("\nWhich among the 9x9 puzzle do you want to find a solution for? (1/2/3/4/5): ")) 
+                            chosenPuzzle6 = int(input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")) 
                             if chosenPuzzle6 == 1:
                                 finalPuzzle = puzzle9_1
                             elif chosenPuzzle6 == 2:
@@ -232,16 +232,16 @@ while True:
                             break
 
                         else:
-                            print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
+                            print("Puzzle sizes are \033[1m\033[31monly 3, 4, 6, 8,\033[0m and \033[1m\033[31m9.\033[0m")
                     
                     else:
-                        print("Enter numbers only.")
+                        print("Enter \033[1m\033[31mnumbers\033[0m only.")
                 break
 
             # if the user wants to find solution to his/her own puzzle
             elif puzzle == 2:
                 while True: 
-                    size = input("\nWhat is the size of your puzzle? (3/4/6/8/9): ")
+                    size = input("\nWhat is the \033[4msize of your puzzle\033[0m? \n\033[1mEnter 3 for 3x3 \nEnter 4 for 4x4 \nEnter 6 for 6x6 \nEnter 8 for 8x8 \nEnter 9 for 9x9\033[0m \n\033[3mAnswer:\033[0m ")
                     if size.isdigit():
                         size = int(size)
 
@@ -255,11 +255,11 @@ while True:
 
                             while True: 
                                 while True:
-                                    userPuzzleRow = list(input("Row: "))
+                                    userPuzzleRow = list(input("\n\033[3mRow:\033[0m "))
                                     integers = []
 
                                     if len(userPuzzleRow) != 3:
-                                        print("Make sure to enter 3 numbers.")
+                                        print("\033[91mMake sure to enter 3 numbers.\033[0m")
                                     else:
                                         break
 
@@ -269,7 +269,7 @@ while True:
 
                                 if len(finalPuzzle) == 3:
                                     break
-                                print("Row " + str(len(finalPuzzle))  + " complete")
+                                print("\033[92mRow " + str(len(finalPuzzle))  + " completed\033[0m")
                             break
 
                         elif size == 4:
@@ -282,11 +282,11 @@ while True:
 
                             while True: 
                                 while True:
-                                    userPuzzleRow = list(input("Row: "))
+                                    userPuzzleRow = list(input("\n\033[3mRow:\033[0m "))
                                     integers = []
 
                                     if len(userPuzzleRow) != 4:
-                                        print("Make sure to enter 4 numbers.")
+                                        print("\033[91mMake sure to enter 4 numbers.\033[0m")
                                     else:
                                         break
 
@@ -296,7 +296,7 @@ while True:
 
                                 if len(finalPuzzle) == 4:
                                     break
-                                print("Row " + str(len(finalPuzzle))  + " complete")
+                                print("\033[92mRow " + str(len(finalPuzzle))  + " completed\033[0m")
                             break
 
                         elif size == 6:
@@ -309,11 +309,11 @@ while True:
 
                             while True: 
                                 while True:
-                                    userPuzzleRow = list(input("Row: "))
+                                    userPuzzleRow = list(input("\n\033[3mRow:\033[0m "))
                                     integers = []
 
                                     if len(userPuzzleRow) != 6:
-                                        print("Make sure to enter 6 numbers.")
+                                        print("\033[91mMake sure to enter 6 numbers.\033[0m")
                                     else:
                                         break
 
@@ -323,7 +323,7 @@ while True:
 
                                 if len(finalPuzzle) == 6:
                                     break
-                                print("Row " + str(len(finalPuzzle))  + " complete")
+                                print("\033[92mRow " + str(len(finalPuzzle))  + " completed\033[0m")
                             break
 
                         elif size == 8:
@@ -336,11 +336,11 @@ while True:
 
                             while True: 
                                 while True:
-                                    userPuzzleRow = list(input("Row: "))
+                                    userPuzzleRow = list(input("\n\033[3mRow:\033[0m "))
                                     integers = []
 
                                     if len(userPuzzleRow) != 8:
-                                        print("Make sure to enter 8 numbers.")
+                                        print("\033[91mMake sure to enter 8 numbers.\033[0m")
                                     else:
                                         break
 
@@ -350,7 +350,7 @@ while True:
 
                                 if len(finalPuzzle) == 8:
                                     break
-                                print("Row " + str(len(finalPuzzle))  + " complete")
+                                print("\033[92mRow " + str(len(finalPuzzle))  + " completed\033[0m")
                             break
 
                         elif size == 9:
@@ -363,11 +363,11 @@ while True:
 
                             while True: 
                                 while True:
-                                    userPuzzleRow = list(input("Row: "))
+                                    userPuzzleRow = list(input("\n\033[3mRow:\033[0m "))
                                     integers = []
 
                                     if len(userPuzzleRow) != 9:
-                                        print("Make sure to enter 9 numbers.")
+                                        print("\033[91mMake sure to enter 9 numbers.\033[0m")
                                     else:
                                         break
 
@@ -377,24 +377,24 @@ while True:
 
                                 if len(finalPuzzle) == 9:
                                     break
-                                print("Row " + str(len(finalPuzzle))  + " complete")
+                                print("\033[92mRow " + str(len(finalPuzzle))  + " completed\033[0m")
                             break
 
                         else:
-                            print("Puzzle sizes are only 3, 4, 6, 8, and 9.")
+                            print("Puzzle sizes are \033[1m\033[31monly 3, 4, 6, 8,\033[0m and \033[1m\033[31m9.\033[0m")
 
                     else:
-                        print("Enter numbers only.")
+                        print("Enter \033[1m\033[91mnumbers\033[0m only.")
                 break
         
             elif puzzle <= 0 or puzzle >= 3:
-                print("Choose between 1 and 2 only.")
+                print("Choose between \033[1m\033[91m1\033[0m and \033[1m\033[91m2\033[0m only.")
 
         else:
-            print("Choose between 1 and 2 only.")
+            print("Choose between \033[1m\033[91m1\033[0m and \033[1m\033[91m2\033[0m only.")
 
 
-    print("\nYour Chosen Puzzle:")
+    print("\n\033[1m\033[95mYour Chosen Puzzle:\033[0m")
     print(np.matrix(finalPuzzle))
 
     def possible(row, column, answer):
@@ -429,15 +429,12 @@ while True:
                             finalPuzzle[row][column] = 0 # if the number does not satisfy the rules, it will go back to 0 or be blank again
                     return
         
-        print("\nSolution:")
+        print("\n\033[1m\033[92mSolution:\033[0m")
         print(np.matrix(finalPuzzle))
-        print()
 
     solve()
 
-    solveAgain = input("Do you want to solve again? (Yes/No) ")
-    if solveAgain.lower() == "yes":
-        pass
-    elif solveAgain.lower() == "no":
-        print("\n====================== GOOD BYE ======================\n")
+    solveAgain = input("\nDo you want to \033[4msolve again\033[0m? \033[1mPress any key\033[0m to continue or \033[1mpress Q\033[0m to quit \n\033[3mAnswer:\033[0m ")
+    if solveAgain.lower() == "q":
+        print("\n\033[1m====================== GOOD BYE ======================\033[0m\n")
         break
