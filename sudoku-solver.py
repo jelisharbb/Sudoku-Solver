@@ -1,5 +1,5 @@
 import numpy as np
-import sys, time, os
+import sys, time
 
 print("\n\033[1m==================== SUDOKU SOLVER ====================\033[0m")
 message = "Can't find the solution to your sudoku puzzle? Fret not, \nbecause we've got you! This program will find it for you.\n"
@@ -91,7 +91,10 @@ while True:
                             time.sleep(0.5)
 
                             while True: 
-                                chosenPuzzle3 = input("\nWhich among the \033[4m3x3 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                message = "\nWhich among the \033[4m3x3 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m"
+                                typewriter(message)
+                                chosenPuzzle3 = input("\n\033[3mAnswer:\033[0m ")
+
                                 if chosenPuzzle3.isdigit():
                                     chosenPuzzle3 = int(chosenPuzzle3)
                                     if chosenPuzzle3 == 1:
@@ -152,7 +155,10 @@ while True:
                             time.sleep(0.5)
 
                             while True: 
-                                chosenPuzzle4 = input("\nWhich among the \033[4m4x4 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                message = "\nWhich among the \033[4m4x4 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m"
+                                typewriter(message)
+                                chosenPuzzle4 = input("\n\033[3mAnswer:\033[0m ")
+
                                 if chosenPuzzle4.isdigit():
                                     chosenPuzzle4 = int(chosenPuzzle4)
                                     if chosenPuzzle4 == 1:
@@ -213,7 +219,10 @@ while True:
                             time.sleep(0.5)
 
                             while True:
-                                chosenPuzzle6 = input("\nWhich among the \033[4m6x6 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                message = "\nWhich among the \033[4m6x6 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m"
+                                typewriter(message)
+                                chosenPuzzle6 = input("\n\033[3mAnswer:\033[0m ")
+
                                 if chosenPuzzle6.isdigit():
                                     chosenPuzzle6 = int(chosenPuzzle6) 
                                     if chosenPuzzle6 == 1:
@@ -274,7 +283,10 @@ while True:
                             time.sleep(0.5)
 
                             while True:
-                                chosenPuzzle8 = input("\nWhich among the \033[4m8x8 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                message = "\nWhich among the \033[4m8x8 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m"
+                                typewriter(message)
+                                chosenPuzzle8 = input("\n\033[3mAnswer:\033[0m ")
+
                                 if chosenPuzzle8.isdigit():
                                     chosenPuzzle8 = int(chosenPuzzle8)
                                     if chosenPuzzle8 == 1:
@@ -335,7 +347,10 @@ while True:
                             time.sleep(0.5)
 
                             while True:
-                                chosenPuzzle9 = input("\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m \n\033[3mAnswer:\033[0m ")
+                                message = "\nWhich among the \033[4m9x9 puzzles\033[0m do you want to find a solution for? \033[1m\033[96m(1/2/3/4/5)\033[0m"
+                                typewriter(message)
+                                chosenPuzzle9 = input("\n\033[3mAnswer:\033[0m ")
+
                                 if chosenPuzzle9.isdigit():
                                     chosenPuzzle9 = int(chosenPuzzle9)
                                     if chosenPuzzle9 == 1:
